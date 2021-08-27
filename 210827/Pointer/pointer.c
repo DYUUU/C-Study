@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <time.h>
 
-void main()
+void swap(int a, int b);
+void swapAddr(int *a, int *b);
+void changeArray(int arr[]);
+
+void pointer()
 {
 	// 포인터
 	// [철수] ; 101호
@@ -62,38 +66,84 @@ void main()
 	printf("스파이가 방문하는 곳 주소 : %d 암호 : %d\n", 스파이, *스파이);*/
 
 	// 배열?
-	int arr[3] = { 5,10,15 };
-	int *ptr = arr;
+	//int arr[3] = { 5,10,15 };
+	//int *ptr = arr;
+	//for (int i = 0; i < 3; i++)
+	//{
+	//	printf("배열 arr[%d]의 값  %d\n",i, arr[i]);
+	//}
+	//for (int i = 0; i < 3; i++)
+	//{
+	//	printf("포인터 ptr[%d]의 값 %d\n",i, ptr[i]);
+	//}
+
+	//ptr[0] = 100;
+	//ptr[1] = 200;  
+	//ptr[2] = 300;
+
+	//// *(arr+i) == arr[i] 똑같은 표현
+	//// arr == arr 배열의 첫 번재 값의 주소와 동일 == &arr[0]
+	//for (int i = 0; i < 3; i++)
+	//{
+	//	printf("배열 arr[%d]의 값  %d\n", i, *(arr+i));
+	//}
+	//for (int i = 0; i < 3; i++)
+	//{
+	//	printf("포인터 ptr[%d]의 값 %d\n", i, *(ptr+i));
+	//}
+
+	//printf("arr의 자체의 값 : %d\n", arr);
+	//printf("arr[0]의 주소 : %d\n", &arr[0]);
+
+	//printf("arr 자체의 값이 가지는 주소의 실제 값 : %d\n", *arr);
+	//printf("arr[0]의 실제 값 : %d\n", *&arr[0]);
+
+	// *&은 상쇄되는 것이다. 즉 arr[0] == *&arr[0]
+
+	//int a = 10;
+	//int b = 20;
+	//// a 와 b의 값을 바꾼다.
+	//// Call by Value -> 값만 복사한다는 의미
+
+	//printf("Swap 함수 전 => a : %d, b : %d\n", a, b);
+	//swap(a, b);
+	//printf("Swap 함수 후 => a : %d, b : %d\n", a, b);
+
+	//// Call by Reference -> 메모리 주소에서 직접 변환
+	//printf("(주소값 전달) SwapAddr 함수 전 => a : %d, b : %d\n", a, b);
+	//swapAddr(&a, &b);
+	//printf("(주소값 전달) SwapAddr 함수 후 => a : %d, b : %d\n", a, b);
+
+	// 배열일 때 arr2 -> 주소
+	int arr2[3] = { 10,20,30 };
+	changeArray(arr2);
 	for (int i = 0; i < 3; i++)
 	{
-		printf("배열 arr[%d]의 값  %d\n",i, arr[i]);
-	}
-	for (int i = 0; i < 3; i++)
-	{
-		printf("포인터 ptr[%d]의 값 %d\n",i, ptr[i]);
+		printf("arr2 : %d\n", arr2[i]);
 	}
 
-	ptr[0] = 100;
-	ptr[1] = 200;  
-	ptr[2] = 300;
+	// scanf에서 &num과 같이 &를 사용하는 이유
+	
+}
 
-	// *(arr+i) == arr[i] 똑같은 표현
-	// arr == arr 배열의 첫 번재 값의 주소와 동일 == &arr[0]
-	for (int i = 0; i < 3; i++)
-	{
-		printf("배열 arr[%d]의 값  %d\n", i, *(arr+i));
-	}
-	for (int i = 0; i < 3; i++)
-	{
-		printf("포인터 ptr[%d]의 값 %d\n", i, *(ptr+i));
-	}
+void swap(int a, int b)
+{
+	int temp = a;
+	a = b;
+	b = temp;
+	printf("Swap 함수 내 => a : %d b : %d\n", a, b);
 
-	printf("arr의 자체의 값 : %d\n", arr);
-	printf("arr[0]의 주소 : %d\n", &arr[0]);
+}
 
-	printf("arr 자체의 값이 가지는 주소의 실제 값 : %d\n", *arr);
-	printf("arr[0]의 실제 값 : %d\n", *&arr[0]);
+void swapAddr(int* a, int* b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+	printf("(주소값 전달)SwapAddr 함수 내 => a : %d, b : %d\n", *a, *b);
+}
 
-
-		
+void changeArray(int arr[])
+{
+	arr[2] = 50;
 }

@@ -1,1 +1,2 @@
 C:\Users\juram\Desktop\Dev\C-Study\210827\Pointer\Debug\Pointer.exe
+D:\Dev\c,c++\c\C-Study\210827\Pointer\Debug\Pointer.exe
