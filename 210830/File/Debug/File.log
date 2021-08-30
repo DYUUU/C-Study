@@ -1,0 +1,5 @@
+﻿  file_project.c
+C:\Users\juram\Desktop\Dev\C-Study\210830\File\file_project.c(23,12): warning C4013: 'getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\juram\Desktop\Dev\C-Study\210830\File\file_project.c(39,12): warning C4013: 'strcmp'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\juram\Desktop\Dev\C-Study\210830\File\file_project.c(48,4): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
+  File.vcxproj -> C:\Users\juram\Desktop\Dev\C-Study\210830\File\Debug\File.exe
