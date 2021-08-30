@@ -1,0 +1,4 @@
+﻿  multi_array_project.c
+D:\Dev\c,c++\c\C-Study\210830\MultiArray\multi_array_project.c(24,7): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\Dev\c,c++\c\C-Study\210830\MultiArray\multi_array_project.c(135,21): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  MultiArray.vcxproj -> D:\Dev\c,c++\c\C-Study\210830\MultiArray\Debug\MultiArray.exe
